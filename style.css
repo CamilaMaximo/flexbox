@@ -1,0 +1,205 @@
+
+body{
+
+}
+
+/*display flexbox*/
+.flex{
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+.flex p{
+    padding:3px;
+}
+
+
+/*column*/
+.flex-column{
+    display: flex;
+    flex-direction: column;
+    background-color: #7e7b7b;
+    margin-bottom: 20px;
+}
+/*wrap*/
+.flex-wrap{
+    display: flex;
+    flex-wrap:wrap ;
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+.box{
+    height: 40px;
+    width: 33%;
+    background-color: #ddd;
+    border: 1px solid black;
+}
+
+/*justify Content*/
+.flex-justify{
+    justify-content: center;
+}
+.flex-justify,
+.flex-around,
+.flex-between,
+.flex-end,
+.flex-start{
+    display: flex;
+    margin-bottom: 20px;
+}
+.flex-justify .box,
+.flex-around .box,
+.flex-between .box,
+.flex-end .box,
+.flex-start .box{
+    width: 50px;
+}
+
+/*space around*/
+.flex-around{
+ justify-content: space-around;
+}
+
+/*Space between*/
+.flex-between{
+    justify-content: space-between;
+}
+/*End*/
+.flex-end{
+    justify-content: end;
+}
+
+.flex-start{
+    justify-content: start;
+}
+
+/*align items*/
+
+
+.align-center,
+.align-end,
+.align-strech{
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.align-center .box,
+.align-end .box,
+.align-strech .box{
+    width: 50px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end{
+    align-items:flex-end;
+}
+/* neste caso ele não funciona, pois a altura do box já  foi determina, para modificar basta pegar apenas ele e colocar uma altura  automatica  como abaixo. */
+.align-strech{
+    align-items: stretch; 
+}
+/*agora ira funcionar */
+.align-strech .box{
+    height: auto;
+}
+
+/*gap*/
+
+.gap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid green;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+.gap .box{
+    width: 32%;
+   
+}
+
+/*Order*/
+
+.order {
+    display: flex;
+}
+#one{
+    order:1;
+}
+#two{
+    order: 2;
+}
+#three{
+    order:3;
+}
+
+/*grow*/
+
+.grow{
+    display: flex;
+}
+
+.grow .box{
+    flex: 1; /*este é o padrão*/
+
+}
+.grow #big{
+    flex: 3;
+}
+/*Basis - complementa o grow*/
+.basis{
+    display: flex;
+}
+.basis .box{
+    flex-basis: 20px;
+}
+.basis #big{
+    flex-grow: 1;
+}
+/*Shrink*/
+.shrink{
+    display: flex;
+}
+.shrink .box{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 250px;
+    width: auto;
+}
+.shrink #small{
+    flex-shrink: 2; /*irá diminuir quando a tela diminuir */
+}
+
+/* Flex shorthand
+Exemplo => flex: 2 1 100px
+é como  grow= 2, shrink=1 e basis=100px*/
+
+.flex-shorthand{
+    display: flex;
+}
+.flex-shorthand .box{
+    width: auto;
+    flex: 1 1 50px;
+
+}
+.flex-shorthand #diff{
+    flex: 3 1 400px;
+}
+
+/*auto alinhamento*/
+
+.autoAlinhamento{
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    border:1px solid black
+}
+
+.autoAlinhamento .diff{
+    align-self: center;
+
+}
